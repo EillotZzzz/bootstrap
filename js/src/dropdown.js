@@ -174,7 +174,9 @@ class Dropdown extends BaseComponent {
         }
       }
 
+      this._menu.classList.add('popper-active')
       this._popper = Popper.createPopper(referenceElement, this._menu, this._getPopperConfig())
+      this._menu.classList.remove('popper-active')
     }
 
     // If this is a touch-enabled device we add extra
